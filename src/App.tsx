@@ -13,9 +13,7 @@ export const App = () => {
 		<>
 			<ScrollProgress />
 
-			<AnimateSection>
-				<Header />
-			</AnimateSection>
+			<Header />
 
 			<AnimateSection>
 				<HeroSection />
