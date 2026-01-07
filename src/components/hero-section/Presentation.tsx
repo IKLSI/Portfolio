@@ -1,4 +1,4 @@
-import ProfilImage from "../assets/img/Presentation.jpeg";
+import ProfilImage from "../../assets/img/Presentation.jpeg";
 
 export const Presentation = () => {
 	return (

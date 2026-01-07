@@ -114,3 +114,14 @@ body
 {
 	height: calc(100vh - 75px);
 }
+
+@media (max-width: 768px) {
+	.name-title {
+		font-size: 2rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1.2rem;
+		padding: 0 0.5rem;
+	}
+}

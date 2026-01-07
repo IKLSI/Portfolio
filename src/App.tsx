@@ -1,26 +1,46 @@
-import type { FC } from "react";
-import { Header } from "./components/Header";
-import { HeroSection } from "./components/HeroSection";
-import { ScrollProgress } from "./components/ScrollProgress";
-import { Presentation } from "./components/Presentation";
-import { ProjectsSection } from "./components/ProjectsSection";
-import CareerTimeline from "./components/CareerTimeline";
-import { SkillsSection } from "./components/SkillsSection";
-import { Footer } from "./components/Footer";
+import { Header } from "./components/layout/Header";
+import { HeroSection } from "./components/hero-section/HeroSection";
+import { ScrollProgress } from "./components/animations/ScrollProgress";
+import { Presentation } from "./components/hero-section/Presentation";
+import { ProjectsSection } from "./components/projects-section/ProjectsSection";
+import CareerTimeline from "./components/career-timeline/CareerTimeline";
+import { SkillsSection } from "./components/skills-section/SkillsSection";
+import { Footer } from "./components/layout/Footer";
+import { AnimateSection } from "./components/animations/AnimateSection";
 
-export const App: FC = () => {
+export const App = () => {
 	return (
 		<>
 			<ScrollProgress />
-			<Header />
-			<HeroSection />
-			<Presentation />
-			<CareerTimeline />
-			<SkillsSection />
-			<ProjectsSection />
+
+			<AnimateSection>
+				<Header />
+			</AnimateSection>
+
+			<AnimateSection>
+				<HeroSection />
+			</AnimateSection>
+
+			<AnimateSection>
+				<Presentation />
+			</AnimateSection>
+
+			<AnimateSection>
+				<CareerTimeline />
+			</AnimateSection>
+
+			<AnimateSection>
+				<SkillsSection />
+			</AnimateSection>
+
+			<AnimateSection>
+				<ProjectsSection />
+			</AnimateSection>
+
 			<Footer />
 		</>
 	);
 };
+
 
 export default App;
