@@ -9,36 +9,35 @@ import { Footer } from "./components/layout/Footer";
 import { AnimateSection } from "./components/animations/AnimateSection";
 
 export const App = () => {
-	return (
-		<>
-			<ScrollProgress />
+  return (
+    <>
+      <ScrollProgress />
 
-			<Header />
+      <Header />
 
-			<AnimateSection>
-				<HeroSection />
-			</AnimateSection>
+      <AnimateSection>
+        <HeroSection />
+      </AnimateSection>
 
-			<AnimateSection>
-				<Presentation />
-			</AnimateSection>
+      <AnimateSection>
+        <Presentation />
+      </AnimateSection>
 
-			<AnimateSection>
-				<CareerTimeline />
-			</AnimateSection>
+      <AnimateSection>
+        <CareerTimeline />
+      </AnimateSection>
 
-			<AnimateSection>
-				<SkillsSection />
-			</AnimateSection>
+      <AnimateSection>
+        <SkillsSection />
+      </AnimateSection>
 
-			<AnimateSection>
-				<ProjectsSection />
-			</AnimateSection>
+      <AnimateSection>
+        <ProjectsSection />
+      </AnimateSection>
 
-			<Footer />
-		</>
-	);
+      <Footer />
+    </>
+  );
 };
-
 
 export default App;

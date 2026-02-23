@@ -1,14 +1,45 @@
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+
 export const HeroSection = () => {
-	return (
-		<div className="d-flex flex-column align-items-center justify-content-center hero-section" id="home">
-			<div className="text-center">
-				<h1 className="mb-4 name-title">
-					KYLIANN LEVESQUE
-				</h1>
-				<h2 className="d-inline-block position-relative fs-4 fw-light hero-subtitle px-3 work-title">
-					FULL-STACK DEVELOPER
-				</h2>
-			</div>
-		</div>
-	);
+  return (
+    <Box
+      id="home"
+      className="hero-section"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Box sx={{ textAlign: "center" }}>
+        <Typography
+          component="h1"
+          className="name-title"
+          sx={{
+            mb: "0.25rem",
+            fontFamily: "Monument",
+            fontSize: { xs: "2rem", md: "7rem" },
+            lineHeight: 1,
+            fontWeight: "inherit",
+          }}
+        >
+          KYLIANN LEVESQUE
+        </Typography>
+        <Typography
+          component="h2"
+          className="hero-subtitle"
+          sx={{
+            display: "inline-block",
+            position: "relative",
+            fontSize: "1.35rem",
+            fontWeight: 300,
+          }}
+        >
+          FULL-STACK DEVELOPER
+        </Typography>
+      </Box>
+    </Box>
+  );
 };

@@ -1,23 +1,75 @@
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
+
+const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  e.preventDefault();
+  const target = document.querySelector(href);
+  if (target) {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: target, offsetY: 0 },
+      ease: "power2.inOut",
+    });
+  }
+};
+
 export const Header = () => {
-	return (
-		<header className="w-100 border-bottom border-dark position-sticky top-0 bg-white z-3">
-			<nav className="container-fluid d-flex align-items-center justify-content-between py-3 px-4 menu">
-				<div className="header-logo fs-3 fw-bold">KLS</div>
+  return (
+    <AppBar
+      position="sticky"
+      color="default"
+      elevation={0}
+      sx={{
+        borderBottom: "1px solid",
+        borderColor: "text.primary",
+        bgcolor: "background.default",
+        zIndex: 3,
+      }}
+    >
+      <Toolbar sx={{ justifyContent: "space-between", px: 4, py: 1.5 }}>
+        <Typography
+          component="div"
+          className="header-logo"
+          sx={{
+            fontFamily: "'WanoQuin', sans-serif",
+            fontSize: "1.8rem",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            color: "text.primary",
+          }}
+        >
+          KLS
+        </Typography>
 
-				<ul className="d-flex gap-5 m-0 p-0 fw-light list-unstyled">
-					<li>
-						<a href="#home" className="text-dark text-decoration-none menu-link">HOME</a>
-					</li>
-					<li>
-						<a href="#about" className="text-dark text-decoration-none menu-link">ABOUT</a>
-					</li>
-					<li>
-						<a href="#projects" className="text-dark text-decoration-none menu-link">PROJECTS</a>
-					</li>
-				</ul>
+        <Box component="nav" sx={{ display: "flex", gap: "3rem" }}>
+          {[
+            { href: "#home", label: "HOME" },
+            { href: "#about", label: "ABOUT" },
+            { href: "#projects", label: "PROJECTS" },
+          ].map(({ href, label }) => (
+            <Link
+              key={label}
+              href={href}
+              fontSize="1.05rem"
+              underline="none"
+              className="menu-link"
+              sx={{ color: "text.primary" }}
+              onClick={(e) => scrollTo(e, href)}
+            >
+              {label}
+            </Link>
+          ))}
+        </Box>
 
-				<div className="animated-border"></div>
-			</nav>
-		</header>
-	);
+        <Box className="animated-border" />
+      </Toolbar>
+    </AppBar>
+  );
 };
