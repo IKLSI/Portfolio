@@ -3,10 +3,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
-import { gsap } from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-gsap.registerPlugin(ScrollToPlugin);
+import { gsap } from "../../lib/gsap";
+import { navLinks } from "../../data/navigation";
 
 const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
   e.preventDefault();
@@ -28,12 +26,12 @@ export const Header = () => {
       elevation={0}
       sx={{
         borderBottom: "1px solid",
-        borderColor: "text.primary",
+        borderColor: "divider",
         bgcolor: "background.default",
         zIndex: 3,
       }}
     >
-      <Toolbar sx={{ justifyContent: "space-between", px: 4, py: 1.5 }}>
+      <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 4 }, py: 1.5 }}>
         <Typography
           component="div"
           className="header-logo"
@@ -43,24 +41,31 @@ export const Header = () => {
             letterSpacing: "2px",
             textTransform: "uppercase",
             color: "text.primary",
+            cursor: "pointer",
           }}
+          onClick={() =>
+            gsap.to(window, {
+              duration: 1,
+              scrollTo: { y: 0 },
+              ease: "power2.inOut",
+            })
+          }
         >
           KLS
         </Typography>
 
-        <Box component="nav" sx={{ display: "flex", gap: "3rem" }}>
-          {[
-            { href: "#home", label: "HOME" },
-            { href: "#about", label: "ABOUT" },
-            { href: "#projects", label: "PROJECTS" },
-          ].map(({ href, label }) => (
+        <Box
+          component="nav"
+          sx={{ display: { xs: "none", md: "flex" }, gap: "2.5rem" }}
+        >
+          {navLinks.map(({ href, label }) => (
             <Link
               key={label}
               href={href}
-              fontSize="1.05rem"
+              fontSize="0.85rem"
               underline="none"
               className="menu-link"
-              sx={{ color: "text.primary" }}
+              sx={{ color: "text.primary", letterSpacing: "0.08em" }}
               onClick={(e) => scrollTo(e, href)}
             >
               {label}

@@ -1,30 +1,30 @@
 import { Header } from "./components/layout/Header";
-import { HeroSection } from "./components/hero-section/HeroSection";
+import { HeroSection } from "./components/hero/HeroSection";
 import { ScrollProgress } from "./components/animations/ScrollProgress";
-import { Presentation } from "./components/hero-section/Presentation";
-import { ProjectsSection } from "./components/projects-section/ProjectsSection";
-import CareerTimeline from "./components/career-timeline/CareerTimeline";
-import { SkillsSection } from "./components/skills-section/SkillsSection";
+import { WhatIDoSection } from "./components/services/WhatIDoSection";
+import { ProjectsSection } from "./components/projects/ProjectsSection";
+import { SkillsSection } from "./components/skills/SkillsSection";
+import CareerTimeline from "./components/career/CareerTimeline";
 import { Footer } from "./components/layout/Footer";
 import { AnimateSection } from "./components/animations/AnimateSection";
+import { WelcomeToast } from "./components/WelcomeToast";
 
 export const App = () => {
   return (
     <>
+      <WelcomeToast />
       <ScrollProgress />
 
       <Header />
 
+      <HeroSection />
+
       <AnimateSection>
-        <HeroSection />
+        <WhatIDoSection />
       </AnimateSection>
 
       <AnimateSection>
-        <Presentation />
-      </AnimateSection>
-
-      <AnimateSection>
-        <CareerTimeline />
+        <ProjectsSection />
       </AnimateSection>
 
       <AnimateSection>
@@ -32,7 +32,7 @@ export const App = () => {
       </AnimateSection>
 
       <AnimateSection>
-        <ProjectsSection />
+        <CareerTimeline />
       </AnimateSection>
 
       <Footer />

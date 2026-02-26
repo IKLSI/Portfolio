@@ -1,10 +1,7 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "../../lib/gsap";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export const ScrollProgress = () => {
   const barRef = useRef<HTMLDivElement>(null);

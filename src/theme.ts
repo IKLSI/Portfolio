@@ -1,5 +1,13 @@
 import { createTheme } from "@mui/material/styles";
 
+export const colors = {
+  dark: "#0a0a0f",
+  body: "#6b6b80",
+  muted: "#9ca3af",
+  lavender: "#a78bfa",
+  lilac: "#c4b5fd",
+} as const;
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -10,7 +18,7 @@ const theme = createTheme({
     },
     text: {
       primary: "#212529",
-      secondary: "#6c757d",
+      secondary: "#6b6b80",
     },
     background: {
       default: "#ffffff",

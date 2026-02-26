@@ -1,67 +1,39 @@
-<h1 align="center">
-  <a href="#"> Portfolio – Kyliann LEVESQUE </a>
-</h1>
-
-<h3 align="center">
-  Personal portfolio developed with React and TypeScript
-</h3>
+<h1 align="center">Portfolio — Kyliann Levesque</h1>
 
 <p align="center">
-  <img alt="GitHub stars" src="https://img.shields.io/github/stars/IKLSI/Portfolio?style=social">
-  <a href="https://github.com/IKLSI/Portfolio/commits/main/">
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/IKLSI/Portfolio">
-  </a>
-  <img alt="made by Kyliann LEVESQUE" src="https://img.shields.io/badge/made%20by-Kyliann%20LEVESQUE-blue">
-</p>
-
-<h4 align="center"> 
-	 Status: 🚀 Completed
-</h4>
-
-<p align="center">
- <a href="#about">About</a> •
- <a href="#how-it-works">How it works</a> • 
- <a href="#tech-stack">Tech Stack</a> •  
- <a href="#author">Author</a>
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/IKLSI/Portfolio">
+  <img alt="Made by" src="https://img.shields.io/badge/made%20by-Kyliann%20Levesque-8f44fd">
+  <img alt="React" src="https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-3178c6?logo=typescript&logoColor=white">
+  <img alt="MUI" src="https://img.shields.io/badge/MUI-v7-007fff?logo=mui&logoColor=white">
 </p>
 
 ---
 
-## About
+## Overview
 
-This repository contains the source code of my **personal portfolio**, designed to present my profile, technical skills, projects, as well as my academic and professional background in computer science.
-
----
-
-## How it works
-
-This portfolio is a **frontend** application developed with **React** and **TypeScript**, and bootstrapped using **Vite**, providing a modern, fast, and efficient development environment.
+Full-stack developer portfolio showcasing my projects, skills, and career path. Designed and developed end-to-end with a focus on clean architecture, smooth animations, and a consistent design system.
 
 ---
 
 ## Tech Stack
 
-The following technologies and tools were used to build this project:
-
-#### **Platform** ([React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/))
-
-- **[Vite](https://vitejs.dev/)**
-- **[Bootstrap](https://getbootstrap.com/)**
-- **[GSAP](https://greensock.com/gsap/)**
-
-> See the file [package.json](./package.json)
-
-#### **Utils & Assets**
-
-- Editor: **[Visual Studio Code](https://code.visualstudio.com/)**
-- Icons: **[Font Awesome](https://fontawesome.com/)**
-- Fonts: **Poppins**, **WanoQuin**, **Gill Sans**
+| Category | Tools |
+|---|---|
+| **Framework** | React 19 + TypeScript |
+| **Build** | Vite 7 + pnpm |
+| **UI** | Material UI v7 + Emotion |
+| **Animations** | GSAP 3 (ScrollTrigger, ScrollToPlugin) |
+| **Fonts** | Poppins (@fontsource), WanoQuin |
+| **Icons** | MUI Icons Material |
 
 ---
 
 ## Author
 
-[![LinkedIn Badge](https://img.shields.io/badge/-Kyliann%20Levesque-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/kyliann-levesque-87711a277/)
+[![LinkedIn](https://img.shields.io/badge/-Kyliann%20Levesque-0077b5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kyliann-levesque-87711a277/)
+[![GitHub](https://img.shields.io/badge/-IKLSI-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/IKLSI)
+[![Medium](https://img.shields.io/badge/-@kyliannlvs2-000000?style=flat-square&logo=medium&logoColor=white)](https://medium.com/@kyliannlvs2)
 
 ---
 

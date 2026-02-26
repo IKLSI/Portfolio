@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "@fontsource/poppins/index.css";
+import "./lib/gsap";
 import theme from "./theme";
 import App from "./App.tsx";
 
