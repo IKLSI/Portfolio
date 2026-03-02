@@ -81,6 +81,7 @@ export function ProjectsSection() {
               image={project.image}
               githubLink={project.githubLink}
               liveLink={project.liveLink}
+              liveLinkLabel={project.liveLinkLabel}
               technologies={project.technologies || []}
             />
           ))}

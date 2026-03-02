@@ -71,7 +71,13 @@ export const HeroSection = () => {
             gap: { xs: 4, md: 0 },
           }}
         >
-          <Box sx={{ flex: { md: "0 0 58%" }, pr: { md: 8 } }}>
+          <Box
+            sx={{
+              flex: { md: "0 0 58%" },
+              pr: { md: 8 },
+              textAlign: { xs: "center", md: "left" },
+            }}
+          >
             {["KYLIANN", "LEVESQUE"].map((word) => (
               <Typography
                 key={word}
@@ -115,11 +121,17 @@ export const HeroSection = () => {
               }}
             >
               I develop{" "}
-              <Box component="span" sx={{ color: colors.lavender, fontWeight: 600 }}>
+              <Box
+                component="span"
+                sx={{ color: colors.lavender, fontWeight: 600 }}
+              >
                 clean, scalable applications
               </Box>{" "}
               that integrate robust back-end architectures with{" "}
-              <Box component="span" sx={{ color: colors.lavender, fontWeight: 600 }}>
+              <Box
+                component="span"
+                sx={{ color: colors.lavender, fontWeight: 600 }}
+              >
                 intuitive, user-centred
               </Box>{" "}
               front-end experiences.

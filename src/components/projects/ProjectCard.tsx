@@ -12,6 +12,7 @@ interface ProjectCardProps {
   technologies?: string[];
   githubLink?: string;
   liveLink?: string;
+  liveLinkLabel?: string;
   index: number;
 }
 
@@ -22,6 +23,7 @@ export default function ProjectCard({
   technologies = [],
   githubLink,
   liveLink,
+  liveLinkLabel = "Live Demo",
   index,
 }: ProjectCardProps) {
   const [hovered, setHovered] = useState(false);
@@ -171,15 +173,24 @@ export default function ProjectCard({
                   textDecoration: "none",
                   fontSize: "0.75rem",
                   letterSpacing: "0.05em",
-                  transition: "color 0.2s",
-                  "&:hover": { color: colors.lilac },
+                  transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+                  "&:hover": {
+                    color: "rgba(255,255,255,1)",
+                    transform: "translateX(2px)",
+                  },
                 }}
               >
                 <Box
                   component="img"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                   alt="GitHub"
-                  sx={{ width: 14, height: 14, filter: "invert(1)", opacity: 0.7 }}
+                  sx={{
+                    width: 14,
+                    height: 14,
+                    filter: "invert(1)",
+                    opacity: 0.7,
+                    transition: "opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+                  }}
                 />
                 GitHub
               </Box>
@@ -198,11 +209,14 @@ export default function ProjectCard({
                   textDecoration: "none",
                   fontSize: "0.75rem",
                   letterSpacing: "0.05em",
-                  transition: "color 0.2s",
-                  "&:hover": { color: colors.lilac },
+                  transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+                  "&:hover": {
+                    color: "rgba(255,255,255,1)",
+                    transform: "translateX(2px)",
+                  },
                 }}
               >
-                ↗ Live Demo
+                ↗ {liveLinkLabel}
               </Box>
             )}
           </Box>

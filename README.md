@@ -18,14 +18,14 @@ Full-stack developer portfolio showcasing my projects, skills, and career path. 
 
 ## Tech Stack
 
-| Category | Tools |
-|---|---|
-| **Framework** | React 19 + TypeScript |
-| **Build** | Vite 7 + pnpm |
-| **UI** | Material UI v7 + Emotion |
+| Category       | Tools                                  |
+| -------------- | -------------------------------------- |
+| **Framework**  | React 19 + TypeScript                  |
+| **Build**      | Vite 7 + pnpm                          |
+| **UI**         | Material UI v7 + Emotion               |
 | **Animations** | GSAP 3 (ScrollTrigger, ScrollToPlugin) |
-| **Fonts** | Poppins (@fontsource), WanoQuin |
-| **Icons** | MUI Icons Material |
+| **Fonts**      | Poppins (@fontsource), WanoQuin        |
+| **Icons**      | MUI Icons Material                     |
 
 ---
 
