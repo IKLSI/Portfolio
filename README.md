@@ -12,7 +12,7 @@
 
 ## Overview
 
-Full-stack developer portfolio showcasing my projects, skills, and career path. Designed and developed end-to-end with a focus on clean architecture, smooth animations, and a consistent design system.
+Full-stack developer portfolio showcasing projects, skills, and career path. Built end-to-end with a focus on clean architecture, scroll-driven animations, and a consistent design system.
 
 ---
 
@@ -29,6 +29,24 @@ Full-stack developer portfolio showcasing my projects, skills, and career path. 
 
 ---
 
+## Getting Started
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+---
+
 ## Author
 
 [![LinkedIn](https://img.shields.io/badge/-Kyliann%20Levesque-0077b5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kyliann-levesque-87711a277/)
@@ -40,13 +58,3 @@ Full-stack developer portfolio showcasing my projects, skills, and career path. 
 ## License
 
 This project is under the license [MIT](./LICENSE).
-
----
-
-## Learn More
-
-This project was created and configured using [Vite](https://vitejs.dev/).
-
-For more information, please refer to the [official documentation](https://vitejs.dev/guide/).
-
-To learn more about React, visit the [official documentation](https://react.dev/learn).
