@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { gsap } from "../../lib/gsap";
-import ProfilImage from "../../assets/img/Presentation.jpeg";
+import ProfilImage from "../../assets/img/Presentation.jpg";
 import { colors } from "../../theme";
 
 export const HeroSection = () => {
@@ -196,17 +196,22 @@ export const HeroSection = () => {
           zIndex: 1,
         }}
       >
-        <Typography
-          sx={{
-            fontSize: "0.6rem",
-            letterSpacing: "0.25em",
-            color: colors.lilac,
-            textTransform: "uppercase",
-          }}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          style={{ animation: "arrow-bounce 1.6s ease-in-out infinite" }}
         >
-          Scroll
-        </Typography>
-        <Box className="scroll-line" />
+          <path
+            d="M6 9L12 15L18 9"
+            stroke={colors.lilac}
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </Box>
     </Box>
   );

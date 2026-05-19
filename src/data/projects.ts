@@ -20,14 +20,12 @@ export const projects: Project[] = [
     technologies: [".NET", "WPF"],
   },
   {
-    title: "SCRAPPER",
+    title: "SENTINEL",
     description:
-      "Internal tool to track projects, manage library versions, and detect outdated or vulnerable dependencies to facilitate maintenance.",
+      "Full-stack project management platform for dev teams with ticket tracking, kanban board, dependency health monitoring, vulnerability detection, time tracking and role-based access control.",
     image:
-      "https://wydden.com/wp-content/uploads/2017/08/outils-scraper-sans-code-scraping.jpg",
-    liveLink: "https://www.ftel.fr",
-    liveLinkLabel: "Company Site",
-    technologies: [".NET"],
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop",
+    technologies: ["React", ".NET", "PostgreSQL"],
   },
   {
     title: "L'ATELIER DE MANON",
@@ -41,7 +39,7 @@ export const projects: Project[] = [
   {
     title: "TASK MATE",
     description:
-      "Web application for task management with an intuitive interface, allowing users to add, track, and filter tasks to boost daily productivity.",
+      "Task management web app with real-time filtering and priority sorting to keep daily workflows organized.",
     image:
       "https://www.protegez-vous.ca/var/protegez_vous/storage/images/3/0/5/5/3475503-1-fre-CA/520dd560a061-gestion_de_taches.jpg",
     githubLink: "https://github.com/IKLSI/TaskMate",

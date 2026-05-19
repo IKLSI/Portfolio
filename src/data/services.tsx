@@ -34,6 +34,6 @@ export const services: Service[] = [
     title: "APIs & System Design",
     description:
       "I design and build backend systems engineered for reliability and long-term maintainability.",
-    tags: [".NET", "Swagger", "SQL Server"],
+    tags: [".NET", "Scalar", "SQL Server"],
   },
 ];

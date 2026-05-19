@@ -107,13 +107,6 @@ export const SkillsSection = () => {
                 bgcolor: "background.default",
                 boxShadow: "0 2px 12px rgba(0,0,0,0.07)",
                 border: "1px solid rgba(0,0,0,0.06)",
-                transition:
-                  "transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease",
-                "&:hover": {
-                  transform: "translateY(-8px)",
-                  boxShadow: "0 16px 36px rgba(143,68,253,0.14)",
-                  borderColor: "rgba(143,68,253,0.25)",
-                },
               }}
             >
               <Box

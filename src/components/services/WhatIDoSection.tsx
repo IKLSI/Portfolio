@@ -101,13 +101,6 @@ export const WhatIDoSection = () => {
                 display: "flex",
                 flexDirection: "column",
                 gap: 3,
-                transition:
-                  "border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease",
-                "&:hover": {
-                  borderColor: "rgba(143,68,253,0.3)",
-                  boxShadow: "0 16px 48px rgba(143,68,253,0.12)",
-                  transform: "translateY(-6px)",
-                },
               }}
             >
               <Box

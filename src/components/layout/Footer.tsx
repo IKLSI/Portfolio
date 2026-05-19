@@ -61,7 +61,7 @@ export const Footer = () => {
                   "&:hover": { opacity: 1 },
                 }}
               >
-                <Box component="img" src={icon} alt={label} sx={{ width: 22, height: 22 }} />
+                <Box component="img" src={icon} alt={label} sx={{ height: 22, width: "auto" }} />
               </Box>
             ))}
           </Box>

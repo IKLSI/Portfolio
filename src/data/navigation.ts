@@ -19,6 +19,6 @@ export const socials = [
   {
     href: "https://medium.com/@kyliannlvs2",
     label: "Medium",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/2048px-Medium_logo_Monogram.svg.png",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/250px-Medium_logo_Monogram.svg.png",
   },
 ];
