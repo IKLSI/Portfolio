@@ -126,6 +126,7 @@ export const WhatIDoSection = () => {
                     color: colors.dark,
                     mb: 1.5,
                     letterSpacing: "-0.02em",
+                    whiteSpace: "pre-line",
                   }}
                 >
                   {title}

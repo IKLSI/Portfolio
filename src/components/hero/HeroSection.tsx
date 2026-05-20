@@ -120,21 +120,23 @@ export const HeroSection = () => {
                 maxWidth: { xs: "100%", md: 450 },
               }}
             >
-              I develop{" "}
+              I build full-stack applications where every layer gets the same
+              attention.{" "}
               <Box
                 component="span"
                 sx={{ color: colors.lavender, fontWeight: 600 }}
               >
-                clean, scalable applications
+                Solid architecture
               </Box>{" "}
-              that integrate robust back-end architectures with{" "}
+              on the back end,{" "}
               <Box
                 component="span"
                 sx={{ color: colors.lavender, fontWeight: 600 }}
               >
-                intuitive, user-centred
+                clean and intuitive interfaces
               </Box>{" "}
-              front-end experiences.
+              on the front. I care as much about what users never see as what
+              they do.
             </Typography>
           </Box>
 

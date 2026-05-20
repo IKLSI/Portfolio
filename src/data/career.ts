@@ -12,7 +12,7 @@ export const career: CareerItem[] = [
     title: "React & .NET Developer",
     subtitle: "FTEL",
     description:
-      "Designing and developing internal tools to automate and optimize business processes. Adding new features to existing .NET applications in an Agile environment.",
+      "Maintaining and evolving production .NET applications, shipping features, optimising existing modules, reducing technical debt, and developing internal automation tools in an Agile environment.",
     type: "work",
   },
   {
@@ -20,7 +20,7 @@ export const career: CareerItem[] = [
     title: "Engineering Degree",
     subtitle: "ESIGELEC",
     description:
-      "Generalist engineering program with a focus on Digital Services Engineering, emphasizing application development, project management, and data security.",
+      "Generalist engineering program blending mathematics, electronics, software development, networking and management across a broad technical foundation.",
     type: "education",
   },
   {

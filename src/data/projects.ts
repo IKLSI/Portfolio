@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     title: "SENTINEL",
     description:
-      "Full-stack project management platform for dev teams with ticket tracking, kanban board, dependency health monitoring, vulnerability detection, time tracking and role-based access control.",
+      "Full-stack project management platform for dev teams, featuring ticket tracking, kanban board, dependency health, vulnerability detection and role-based access control.",
     image:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop",
     technologies: ["React", ".NET", "PostgreSQL"],
