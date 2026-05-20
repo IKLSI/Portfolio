@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import WebOutlinedIcon from "@mui/icons-material/WebOutlined";
 import LaptopOutlinedIcon from "@mui/icons-material/LaptopOutlined";
-import AccountTreeOutlinedIcon from "@mui/icons-material/AccountTreeOutlined";
 import FindInPageOutlinedIcon from "@mui/icons-material/FindInPageOutlined";
 
 export interface Service {
@@ -27,7 +26,9 @@ export const services: Service[] = [
     tags: [".NET", "WPF"],
   },
   {
-    icon: <FindInPageOutlinedIcon sx={{ fontSize: 32, color: "primary.main" }} />,
+    icon: (
+      <FindInPageOutlinedIcon sx={{ fontSize: 32, color: "primary.main" }} />
+    ),
     title: "Code Review &\nRefactoring",
     description:
       "I turn messy, hard-to-maintain code into clean, structured systems that teams can actually work with.",
