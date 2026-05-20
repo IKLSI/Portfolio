@@ -34,7 +34,7 @@ export const career: CareerItem[] = [
   {
     period: "2022 — 2025",
     title: "Bachelor's in Computer Science",
-    subtitle: "BUT Informatique",
+    subtitle: "IUT Le Havre",
     description:
       "Gained strong skills in programming, databases, algorithms, and systems with practical experience in software development.",
     type: "education",

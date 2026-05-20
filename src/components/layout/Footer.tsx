@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { socials } from "../../data/navigation";
-import { colors } from "../../theme";
 
 export const Footer = () => {
   return (
@@ -24,26 +23,16 @@ export const Footer = () => {
             gap: 2,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-            <Typography
-              sx={{
-                fontFamily: "WanoQuin, sans-serif",
-                fontSize: "1.2rem",
-                letterSpacing: "2px",
-                color: "text.primary",
-              }}
-            >
-              KLS
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "0.78rem",
-                color: colors.muted,
-              }}
-            >
-              © {new Date().getFullYear()} Kyliann Levesque · France
-            </Typography>
-          </Box>
+          <Typography
+            sx={{
+              fontFamily: "WanoQuin, sans-serif",
+              fontSize: "1.2rem",
+              letterSpacing: "2px",
+              color: "text.primary",
+            }}
+          >
+            KLS
+          </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             {socials.map(({ href, label, icon }) => (
@@ -61,7 +50,7 @@ export const Footer = () => {
                   "&:hover": { opacity: 1 },
                 }}
               >
-                <Box component="img" src={icon} alt={label} sx={{ height: 22, width: "auto" }} />
+                <Box component="img" src={icon} alt={label} sx={{ height: 22, width: "auto", borderRadius: label === "Medium" ? "3px" : 0 }} />
               </Box>
             ))}
           </Box>

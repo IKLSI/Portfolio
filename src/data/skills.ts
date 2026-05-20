@@ -30,15 +30,15 @@ export const skills: Skill[] = [
     icon: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftsqlserver.svg",
   },
   {
-    name: "Bootstrap",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
-  },
-  {
     name: "Figma",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   },
   {
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "Bootstrap",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
   },
 ];

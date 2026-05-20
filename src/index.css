@@ -69,17 +69,7 @@ body {
 }
 
 .hero-photo-ring {
-  animation: photo-glow 3s ease-in-out infinite;
-}
-
-@keyframes photo-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(143, 68, 253, 0.2), 0 0 40px rgba(143, 68, 253, 0.07);
-  }
-  50% {
-    box-shadow: 0 0 35px rgba(143, 68, 253, 0.4), 0 0 70px rgba(143, 68, 253, 0.14);
-  }
+  box-shadow: 0 8px 40px rgba(143, 68, 253, 0.25);
 }
 
 @keyframes arrow-bounce {

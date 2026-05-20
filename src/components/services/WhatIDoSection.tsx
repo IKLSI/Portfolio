@@ -89,9 +89,9 @@ export const WhatIDoSection = () => {
             gap: { xs: 2, md: 3 },
           }}
         >
-          {services.map(({ number, icon, title, description, tags }) => (
+          {services.map(({ icon, title, description, tags }) => (
             <Box
-              key={number}
+              key={title}
               className="service-card"
               sx={{
                 bgcolor: "background.default",
@@ -105,34 +105,16 @@ export const WhatIDoSection = () => {
             >
               <Box
                 sx={{
+                  width: 64,
+                  height: 64,
+                  borderRadius: 3,
+                  bgcolor: "rgba(143,68,253,0.08)",
                   display: "flex",
-                  alignItems: "flex-start",
-                  justifyContent: "space-between",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
-                <Box
-                  sx={{
-                    width: 64,
-                    height: 64,
-                    borderRadius: 3,
-                    bgcolor: "rgba(143,68,253,0.08)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {icon}
-                </Box>
-                <Typography
-                  sx={{
-                    fontFamily: "WanoQuin, sans-serif",
-                    fontSize: "2.8rem",
-                    color: "rgba(0,0,0,0.18)",
-                    lineHeight: 1,
-                  }}
-                >
-                  {number}
-                </Typography>
+                {icon}
               </Box>
 
               <Box>
