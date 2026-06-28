@@ -86,88 +86,107 @@ export const WhatIDoSection = () => {
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" },
-            gap: { xs: 2, md: 3 },
+            gap: { xs: 2, md: 2.5 },
           }}
         >
-          {services.map(({ icon, title, description, tags }) => (
+          {services.map(({ title, description, tags }) => (
             <Box
               key={title}
               className="service-card"
               sx={{
-                bgcolor: "background.default",
-                border: "1px solid rgba(0,0,0,0.07)",
-                borderRadius: 4,
-                p: { xs: 3, md: 5 },
+                borderRadius: "16px",
+                border: "1px solid rgba(0,0,0,0.09)",
+                overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
-                gap: 3,
+                bgcolor: "#fff",
               }}
             >
+              {/* Chrome terminal */}
               <Box
                 sx={{
-                  width: 64,
-                  height: 64,
-                  borderRadius: 3,
-                  bgcolor: "rgba(143,68,253,0.08)",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
+                  gap: "6px",
+                  px: "16px",
+                  py: "12px",
+                  bgcolor: "rgba(0,0,0,0.03)",
+                  borderBottom: "1px solid rgba(0,0,0,0.07)",
                 }}
               >
-                {icon}
+                {[["#ff5f57", "#e0443e"], ["#ffbd2e", "#dfa023"], ["#28c840", "#1faa34"]].map(
+                  ([fill, stroke], i) => (
+                    <Box
+                      key={i}
+                      sx={{
+                        width: 11,
+                        height: 11,
+                        borderRadius: "50%",
+                        bgcolor: fill,
+                        boxShadow: `inset 0 0 0 0.5px ${stroke}`,
+                        flexShrink: 0,
+                      }}
+                    />
+                  )
+                )}
               </Box>
 
-              <Box>
+              {/* Contenu */}
+              <Box
+                sx={{
+                  p: { xs: 3, md: "28px 32px 32px" },
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 2,
+                  flexGrow: 1,
+                }}
+              >
                 <Typography
                   component="h3"
                   sx={{
                     fontWeight: 700,
-                    fontSize: "1.2rem",
+                    fontSize: "1.1rem",
                     color: colors.dark,
-                    mb: 1.5,
                     letterSpacing: "-0.02em",
+                    lineHeight: 1.3,
                     whiteSpace: "pre-line",
                   }}
                 >
                   {title}
                 </Typography>
+
                 <Typography
                   sx={{
-                    fontSize: "0.9rem",
+                    fontSize: "0.88rem",
                     lineHeight: 1.85,
                     color: colors.body,
+                    flexGrow: 1,
                   }}
                 >
                   {description}
                 </Typography>
-              </Box>
 
-              <Box
-                sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 0.75,
-                  mt: "auto",
-                }}
-              >
-                {tags.map((tag) => (
-                  <Typography
-                    key={tag}
-                    component="span"
-                    sx={{
-                      fontSize: "0.7rem",
-                      fontWeight: 600,
-                      color: "primary.main",
-                      bgcolor: "rgba(143,68,253,0.07)",
-                      px: 1.2,
-                      py: 0.4,
-                      borderRadius: "100px",
-                      letterSpacing: "0.04em",
-                    }}
-                  >
-                    {tag}
-                  </Typography>
-                ))}
+                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.6, mt: 0.5 }}>
+                  {tags.map((tag) => (
+                    <Typography
+                      key={tag}
+                      component="span"
+                      sx={{
+                        fontSize: "0.65rem",
+                        fontWeight: 700,
+                        color: "primary.main",
+                        bgcolor: "rgba(143,68,253,0.07)",
+                        px: 1.1,
+                        py: 0.4,
+                        borderRadius: "6px",
+                        letterSpacing: "0.06em",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {tag}
+                    </Typography>
+                  ))}
+                </Box>
               </Box>
             </Box>
           ))}
