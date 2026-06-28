@@ -71,18 +71,17 @@ export const CareerTimeline = () => {
         },
       });
 
-      ScrollTrigger.create({
-        trigger: ".timeline-container",
-        start: "top 70%",
-        end: "bottom 70%",
-        onUpdate: (self) => {
-          const index = Math.min(
-            Math.floor(self.progress * career.length),
-            career.length - 1
-          );
-          setActiveIndex(index);
-        },
+      const timelineItems = sectionRef.current?.querySelectorAll(".timeline-item");
+      career.forEach((_, i) => {
+        if (!timelineItems?.[i]) return;
+        ScrollTrigger.create({
+          trigger: timelineItems[i],
+          start: "top 80%",
+          onEnter: () => setActiveIndex(i),
+          onLeaveBack: () => setActiveIndex(Math.max(0, i - 1)),
+        });
       });
+
     }, sectionRef);
 
     return () => ctx.revert();

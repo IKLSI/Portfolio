@@ -13,34 +13,19 @@ export const HeroSection = () => {
     const ctx = gsap.context(() => {
       gsap
         .timeline()
-        .from(".hero-tag", { opacity: 0, y: 20, duration: 0.5 })
-        .from(
-          ".hero-name-line",
-          {
-            opacity: 0,
-            y: 60,
-            duration: 0.7,
-            stagger: 0.15,
-            ease: "power3.out",
-          },
-          "-=0.2",
-        )
+        .from(".hero-name-line", {
+          opacity: 0,
+          y: 60,
+          duration: 0.7,
+          stagger: 0.15,
+          ease: "power3.out",
+        })
         .from(".hero-role", { opacity: 0, y: 20, duration: 0.5 }, "-=0.3")
         .from(".hero-bio", { opacity: 0, y: 20, duration: 0.5 }, "-=0.3")
-        .from(
-          ".hero-btn",
-          { opacity: 0, y: 20, duration: 0.4, stagger: 0.1 },
-          "-=0.2",
-        )
         .from(
           ".hero-photo-ring",
           { opacity: 0, scale: 0.85, duration: 0.9, ease: "back.out(1.2)" },
           "-=0.8",
-        )
-        .from(
-          ".hero-social",
-          { opacity: 0, duration: 0.4, stagger: 0.1 },
-          "-=0.3",
         )
         .from(".scroll-indicator", { opacity: 0, duration: 0.5 }, "-=0.2");
     }, heroRef);
