@@ -75,10 +75,9 @@ export const Header = () => {
               <Link
                 key={label}
                 href={href}
-                fontSize="0.85rem"
                 underline="none"
                 className="menu-link"
-                sx={{ color: "text.primary", letterSpacing: "0.08em" }}
+                sx={{ color: "text.primary", fontSize: "0.85rem", letterSpacing: "0.08em" }}
                 onClick={(e) => scrollTo(e, href)}
               >
                 {label}
@@ -104,16 +103,18 @@ export const Header = () => {
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        PaperProps={{
-          sx: {
-            width: "75vw",
-            maxWidth: 300,
-            bgcolor: "background.default",
-            px: 3,
-            py: 4,
-            display: "flex",
-            flexDirection: "column",
-            gap: 1,
+        slotProps={{
+          paper: {
+            sx: {
+              width: "75vw",
+              maxWidth: 300,
+              bgcolor: "background.default",
+              px: 3,
+              py: 4,
+              display: "flex",
+              flexDirection: "column",
+              gap: 1,
+            },
           },
         }}
       >

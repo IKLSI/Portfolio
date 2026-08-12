@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
-import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { gsap, ScrollTrigger } from "../../lib/gsap";
 import { career } from "../../data/career";

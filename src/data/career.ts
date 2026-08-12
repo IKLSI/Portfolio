@@ -35,7 +35,7 @@ export const career: CareerItem[] = [
     description:
       "Optimized and enhanced .NET and DevExpress software solutions to meet specific client needs. Implemented efficient processes for data handling, improving overall project performance and reliability.",
     type: "work",
-    image: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGB0t9NgNzvN8_8kK-zFet-rObYH6tv6u3dizZURqV09W2iOXGVjSBOnXvyIBJpoHtKNDPGm8M5bUqNE7UBt7BSgpz0I64igSE2P5ECDW4VYeR1ZriSBxUBu0Wt_5c4-IBELuzhuQ=s1360-w1360-h1020",
+    image: "https://media.licdn.com/dms/image/v2/C560BAQHn-ZuKiWDeDA/company-logo_200_200/company-logo_200_200/0/1659687134695/etudes_et_applications_informatiques_logo?e=2147483647&v=beta&t=efgaMUtpyh3OEujVnhvU0z36Q5oFtcMwEaQ7uikh1VY",
   },
   {
     period: "2022 — 2025",
