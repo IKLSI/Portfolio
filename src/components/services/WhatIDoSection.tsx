@@ -94,50 +94,22 @@ export const WhatIDoSection = () => {
               key={title}
               className="service-card"
               sx={{
-                borderRadius: "16px",
-                border: "1px solid rgba(0,0,0,0.09)",
+                borderRadius: "20px",
+                border: "1px solid rgba(0,0,0,0.07)",
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
                 bgcolor: "#fff",
+                boxShadow:
+                  "0 1px 2px rgba(0,0,0,0.04), 0 12px 32px rgba(17,12,34,0.06)",
               }}
             >
-              {/* Chrome terminal */}
               <Box
                 sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "6px",
-                  px: "16px",
-                  py: "12px",
-                  bgcolor: "rgba(0,0,0,0.03)",
-                  borderBottom: "1px solid rgba(0,0,0,0.07)",
-                }}
-              >
-                {[["#ff5f57", "#e0443e"], ["#ffbd2e", "#dfa023"], ["#28c840", "#1faa34"]].map(
-                  ([fill, stroke], i) => (
-                    <Box
-                      key={i}
-                      sx={{
-                        width: 11,
-                        height: 11,
-                        borderRadius: "50%",
-                        bgcolor: fill,
-                        boxShadow: `inset 0 0 0 0.5px ${stroke}`,
-                        flexShrink: 0,
-                      }}
-                    />
-                  )
-                )}
-              </Box>
-
-              {/* Contenu */}
-              <Box
-                sx={{
-                  p: { xs: 3, md: "28px 32px 32px" },
+                  p: { xs: 3.5, md: "32px" },
                   display: "flex",
                   flexDirection: "column",
-                  gap: 2,
+                  gap: 2.5,
                   flexGrow: 1,
                 }}
               >
@@ -145,10 +117,10 @@ export const WhatIDoSection = () => {
                   component="h3"
                   sx={{
                     fontWeight: 700,
-                    fontSize: "1.1rem",
+                    fontSize: { xs: "1.25rem", md: "1.35rem" },
                     color: colors.dark,
-                    letterSpacing: "-0.02em",
-                    lineHeight: 1.3,
+                    letterSpacing: "-0.03em",
+                    lineHeight: 1.25,
                     whiteSpace: "pre-line",
                   }}
                 >
@@ -166,7 +138,16 @@ export const WhatIDoSection = () => {
                   {description}
                 </Typography>
 
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.6, mt: 0.5 }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: 0.75,
+                    mt: 0.5,
+                    pt: 2.5,
+                    borderTop: "1px dashed rgba(0,0,0,0.1)",
+                  }}
+                >
                   {tags.map((tag) => (
                     <Typography
                       key={tag}
@@ -175,11 +156,11 @@ export const WhatIDoSection = () => {
                         fontSize: "0.65rem",
                         fontWeight: 700,
                         color: "primary.main",
-                        bgcolor: "rgba(143,68,253,0.07)",
-                        px: 1.1,
-                        py: 0.4,
-                        borderRadius: "6px",
-                        letterSpacing: "0.06em",
+                        border: "1px solid rgba(143,68,253,0.25)",
+                        px: 1.25,
+                        py: 0.5,
+                        borderRadius: "999px",
+                        letterSpacing: "0.08em",
                         textTransform: "uppercase",
                       }}
                     >

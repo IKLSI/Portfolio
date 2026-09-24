@@ -10,21 +10,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "PREMET",
-    description:
-      "Redesign of an internal audio message broadcasting application for train stations and airports, providing centralized and reliable announcement management.",
-    image:
-      "https://assets.skiesmag.com/wp-content/uploads/2024/03/yvr_airport_aug_4_2020.jpg",
-    liveLink: "https://www.eai.fr/Produits",
-    liveLinkLabel: "Company Site",
-    technologies: [".NET", "WPF"],
-  },
-  {
     title: "SENTINEL",
     description:
-      "Full-stack project management platform for dev teams, featuring ticket tracking, kanban board, dependency health, vulnerability detection and role-based access control.",
+      "Security platform that continuously monitors code repositories, catching vulnerable and outdated dependencies before they reach production.",
     image:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop",
+    liveLink: "https://sentinelbase.vercel.app",
+    technologies: ["React", ".NET", "PostgreSQL"],
+  },
+  {
+    title: "TERMETIS",
+    description:
+      "Complete web platform for an African dance association, combining a public showcase site, a private members' area for sharing videos and a full admin panel.",
+    image:
+      "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800&auto=format&fit=crop",
+    liveLink: "https://termetis.vercel.app",
     technologies: ["React", ".NET", "PostgreSQL"],
   },
   {
@@ -37,6 +37,16 @@ export const projects: Project[] = [
     technologies: ["React", "CodeIgniter"],
   },
   {
+    title: "ROUTE SOLVER",
+    description:
+      "Delivery route optimizer using mathematical modeling and heuristic algorithms to minimize distance under vehicle capacity constraints.",
+    image:
+      "https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=800&auto=format&fit=crop",
+    githubLink: "https://github.com/IKLSI/RouteSolver",
+    liveLink: "https://s601.vercel.app",
+    technologies: ["React", "CPLEX", "Vis.js"],
+  },
+  {
     title: "TASK MATE",
     description:
       "Task management web app with real-time filtering and priority sorting to keep daily workflows organized.",
@@ -44,15 +54,6 @@ export const projects: Project[] = [
       "https://www.protegez-vous.ca/var/protegez_vous/storage/images/3/0/5/5/3475503-1-fre-CA/520dd560a061-gestion_de_taches.jpg",
     githubLink: "https://github.com/IKLSI/TaskMate",
     technologies: ["CodeIgniter"],
-  },
-  {
-    title: "SHOWROOM",
-    description:
-      "Interactive showcase website for a car brand with a modern, responsive design focused on user experience.",
-    image: "https://images.hdqwalls.com/wallpapers/bmw-m-sport-car-dh.jpg",
-    githubLink: "https://github.com/IKLSI/BMW",
-    liveLink: "https://iklsi.github.io/BMW/",
-    technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "HTMLCSS AUTOCOMPLETE",

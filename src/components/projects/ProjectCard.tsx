@@ -2,7 +2,6 @@ import { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Chip from "@mui/material/Chip";
 import { colors } from "../../theme";
 
 interface ProjectCardProps {
@@ -66,10 +65,10 @@ export default function ProjectCard({
             bottom: 0,
             left: 0,
             right: 0,
-            height: hovered ? "100%" : "100px",
+            height: hovered ? "100%" : "140px",
             background: hovered
               ? `linear-gradient(to top, rgba(10,10,15,0.97) 0%, rgba(10,10,15,0.78) 55%, rgba(10,10,15,0.3) 100%)`
-              : `linear-gradient(to top, rgba(10,10,15,0.9), rgba(10,10,15,0.3) 70%, transparent)`,
+              : `linear-gradient(to top, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.6) 55%, transparent)`,
             transition: "height 0.4s ease, background 0.4s ease",
             display: "flex",
             flexDirection: "column",
@@ -77,24 +76,6 @@ export default function ProjectCard({
             p: 2.5,
           }}
         >
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5, mb: 1 }}>
-            {technologies.map((tech) => (
-              <Chip
-                key={tech}
-                label={tech}
-                size="small"
-                sx={{
-                  fontSize: "0.62rem",
-                  fontWeight: 600,
-                  bgcolor: "rgba(143,68,253,0.22)",
-                  color: colors.lilac,
-                  border: "1px solid rgba(143,68,253,0.3)",
-                  height: 20,
-                }}
-              />
-            ))}
-          </Box>
-
           <Box
             sx={{
               display: "flex",
@@ -114,6 +95,50 @@ export default function ProjectCard({
               >
                 {title}
               </Typography>
+
+              {technologies.length > 0 && (
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    alignItems: "center",
+                    columnGap: 1,
+                    rowGap: 0.25,
+                    mt: 0.75,
+                  }}
+                >
+                  {technologies.map((tech, techIndex) => (
+                    <Box
+                      key={tech}
+                      component="span"
+                      sx={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 1,
+                        fontSize: "0.7rem",
+                        fontWeight: 600,
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        color: colors.lilac,
+                      }}
+                    >
+                      {techIndex > 0 && (
+                        <Box
+                          component="span"
+                          sx={{
+                            width: 4,
+                            height: 4,
+                            borderRadius: "50%",
+                            bgcolor: colors.lavender,
+                            opacity: 0.6,
+                          }}
+                        />
+                      )}
+                      {tech}
+                    </Box>
+                  ))}
+                </Box>
+              )}
 
               <Box
                 sx={{
@@ -153,10 +178,10 @@ export default function ProjectCard({
             sx={{
               display: "flex",
               gap: 2,
-              mt: 2,
+              mt: hovered ? 2 : 0,
               overflow: "hidden",
               maxHeight: hovered ? "40px" : "0px",
-              transition: "max-height 0.4s ease",
+              transition: "max-height 0.4s ease, margin-top 0.4s ease",
             }}
           >
             {githubLink && (

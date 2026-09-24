@@ -50,7 +50,7 @@ export const Footer = () => {
                   "&:hover": { opacity: 1 },
                 }}
               >
-                <Box component="img" src={icon} alt={label} sx={{ height: 22, width: "auto", borderRadius: label === "Medium" ? "3px" : 0 }} />
+                <Box component="img" src={icon} alt={label} sx={{ height: 22, width: "auto" }} />
               </Box>
             ))}
           </Box>

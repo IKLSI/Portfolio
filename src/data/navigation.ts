@@ -16,9 +16,4 @@ export const socials = [
     label: "LinkedIn",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
   },
-  {
-    href: "https://medium.com/@kyliannlvs2",
-    label: "Medium",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/250px-Medium_logo_Monogram.svg.png",
-  },
 ];
