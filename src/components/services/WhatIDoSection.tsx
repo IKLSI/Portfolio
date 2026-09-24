@@ -137,37 +137,50 @@ export const WhatIDoSection = () => {
                 >
                   {description}
                 </Typography>
+              </Box>
 
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: 0.75,
-                    mt: 0.5,
-                    pt: 2.5,
-                    borderTop: "1px dashed rgba(0,0,0,0.1)",
-                  }}
-                >
-                  {tags.map((tag) => (
-                    <Typography
-                      key={tag}
-                      component="span"
-                      sx={{
-                        fontSize: "0.65rem",
-                        fontWeight: 700,
-                        color: "primary.main",
-                        border: "1px solid rgba(143,68,253,0.25)",
-                        px: 1.25,
-                        py: 0.5,
-                        borderRadius: "999px",
-                        letterSpacing: "0.08em",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {tag}
-                    </Typography>
-                  ))}
-                </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: 1,
+                  px: { xs: 3.5, md: "32px" },
+                  py: 2.25,
+                  bgcolor: "#fafafb",
+                  borderTop: "1px solid rgba(143,68,253,0.15)",
+                }}
+              >
+                {tags.map((tag) => (
+                  <Typography
+                    key={tag}
+                    component="span"
+                    sx={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 0.75,
+                      fontSize: "0.68rem",
+                      fontWeight: 600,
+                      color: "primary.main",
+                      bgcolor: "#fff",
+                      border: "1px solid rgba(143,68,253,0.18)",
+                      px: 1.25,
+                      py: 0.5,
+                      borderRadius: "8px",
+                      letterSpacing: "0.06em",
+                      textTransform: "uppercase",
+                      "&::before": {
+                        content: '""',
+                        width: 5,
+                        height: 5,
+                        borderRadius: "50%",
+                        bgcolor: "primary.main",
+                        opacity: 0.6,
+                      },
+                    }}
+                  >
+                    {tag}
+                  </Typography>
+                ))}
               </Box>
             </Box>
           ))}

@@ -8,19 +8,19 @@ export const services: Service[] = [
   {
     title: "Full-Stack Product\nDevelopment",
     description:
-      "From schema to screen, I handle every layer of the stack to deliver complete, production-ready web products.",
+      "I build web apps end to end, from the database to the interface, and see them all the way through to production.",
     tags: ["React", "TypeScript", ".NET"],
   },
   {
-    title: "Desktop Application\nDevelopment",
+    title: "Custom Desktop\nSoftware",
     description:
-      "I build desktop applications that handle complex workflows reliably, tailored to real business constraints.",
+      "I build Windows software that fits the way your business actually works, and keeps running smoothly day after day.",
     tags: [".NET", "WPF"],
   },
   {
     title: "Code Review &\nRefactoring",
     description:
-      "I turn messy, hard-to-maintain code into clean, structured systems that teams can actually work with.",
+      "I turn messy, hard-to-maintain code into clean, well-structured systems that teams can easily read, extend and trust.",
     tags: ["Maintainability", "Clean Code"],
   },
 ];
