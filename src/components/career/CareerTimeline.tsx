@@ -306,6 +306,8 @@ export const CareerTimeline = () => {
                         component="img"
                         src={item.image}
                         alt={item.subtitle}
+                        loading="lazy"
+                        decoding="async"
                         sx={{
                           width: "100%",
                           height: "190px",

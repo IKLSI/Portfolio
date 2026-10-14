@@ -156,6 +156,7 @@ export const HeroSection = () => {
                   component="img"
                   src={ProfilImage}
                   alt="Kyliann Levesque"
+                  fetchPriority="high"
                   sx={{
                     width: "100%",
                     height: "100%",

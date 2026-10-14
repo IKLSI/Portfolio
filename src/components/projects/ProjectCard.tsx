@@ -48,6 +48,8 @@ export default function ProjectCard({
           component="img"
           src={image}
           alt={title}
+          loading="lazy"
+          decoding="async"
           sx={{
             width: "100%",
             height: 260,

@@ -113,6 +113,8 @@ export const SkillsSection = () => {
                 component="img"
                 src={skill.icon}
                 alt={skill.name}
+                loading="lazy"
+                decoding="async"
                 sx={{
                   width: 56,
                   height: 56,
