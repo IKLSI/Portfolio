@@ -3,11 +3,13 @@ import Snackbar from "@mui/material/Snackbar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import CloseIcon from "@mui/icons-material/Close";
 import { colors } from "../theme";
 
 export const WelcomeToast = () => {
   const [open, setOpen] = useState(false);
+  const reducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
   useEffect(() => {
     const timer = setTimeout(() => setOpen(true), 800);
@@ -18,6 +20,7 @@ export const WelcomeToast = () => {
     <Snackbar
       open={open}
       autoHideDuration={5000}
+      transitionDuration={reducedMotion ? 0 : undefined}
       onClose={() => setOpen(false)}
       anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
       sx={{

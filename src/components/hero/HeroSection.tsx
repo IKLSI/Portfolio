@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { gsap } from "../../lib/gsap";
+import { gsap, prefersReducedMotion } from "../../lib/gsap";
 import ProfilImage from "../../assets/img/Presentation.jpg";
 import { colors } from "../../theme";
 
@@ -190,7 +190,11 @@ export const HeroSection = () => {
           height="28"
           viewBox="0 0 24 24"
           fill="none"
-          style={{ animation: "arrow-bounce 1.6s ease-in-out infinite" }}
+          style={{
+            animation: prefersReducedMotion
+              ? "none"
+              : "arrow-bounce 1.6s ease-in-out infinite",
+          }}
         >
           <path
             d="M6 9L12 15L18 9"

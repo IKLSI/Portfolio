@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../../lib/gsap";
+import { gsap, prefersReducedMotion } from "../../lib/gsap";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 
@@ -8,6 +8,10 @@ export const ScrollProgress = () => {
   const theme = useTheme();
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
     gsap.set(barRef.current, { scaleX: 0, transformOrigin: "left" });
     gsap.to(barRef.current, {
       scaleX: 1,
@@ -20,6 +24,10 @@ export const ScrollProgress = () => {
       },
     });
   }, []);
+
+  if (prefersReducedMotion) {
+    return null;
+  }
 
   return (
     <Box

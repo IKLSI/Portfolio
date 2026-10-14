@@ -82,3 +82,13 @@ body {
     opacity: 1;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-border::before {
+    animation: none;
+  }
+
+  .menu-link::after {
+    transition: none;
+  }
+}
