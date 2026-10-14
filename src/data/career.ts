@@ -10,17 +10,17 @@ export interface CareerItem {
 export const career: CareerItem[] = [
   {
     period: "2025 — Present",
-    title: "React & .NET Developer",
-    subtitle: "FTEL",
+    title: "React & .NET Developer — Apprenticeship",
+    subtitle: "FTEL · Rouen",
     description:
-      "Maintaining production .NET applications, shipping features, reducing technical debt and building internal tools in an Agile environment. Using AI daily, from scaffolding to code review, to deliver faster.",
+      "Work-study alongside my engineering degree at ESIGELEC. Maintaining production .NET applications, shipping features, reducing technical debt and building internal tools in an Agile environment. Using AI daily, from scaffolding to code review, to deliver faster.",
     type: "work",
     image:
       "https://media.licdn.com/dms/image/v2/C4E0BAQEv8doKUc6AgQ/company-logo_200_200/company-logo_200_200/0/1654611582356/ftel_logo?e=2147483647&v=beta&t=HtA3T1Yo4Y21CjlKFhEiiOg2a1odLhBFkvQ8hnACud4",
   },
   {
     period: "2025 — 2028",
-    title: "Engineering Degree",
+    title: "Engineering Degree — Work-Study",
     subtitle: "ESIGELEC",
     description:
       "Generalist engineering program blending mathematics, electronics, software development, networking and management across a broad technical foundation.",

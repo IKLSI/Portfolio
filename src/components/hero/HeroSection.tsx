@@ -92,7 +92,7 @@ export const HeroSection = () => {
                 textTransform: "uppercase",
               }}
             >
-              Full-Stack Engineer · React & .NET
+              Apprentice Full-Stack Engineer · React & .NET
             </Typography>
 
             <Typography

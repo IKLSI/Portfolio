@@ -51,8 +51,6 @@ pnpm preview
 
 [![LinkedIn](https://img.shields.io/badge/-Kyliann%20Levesque-0077b5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kyliann-levesque-87711a277/)
 [![GitHub](https://img.shields.io/badge/-IKLSI-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/IKLSI)
-[![Medium](https://img.shields.io/badge/-@kyliannlvs2-000000?style=flat-square&logo=medium&logoColor=white)](https://medium.com/@kyliannlvs2)
-
 ---
 
 ## License

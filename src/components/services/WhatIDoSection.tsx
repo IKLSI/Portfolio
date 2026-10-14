@@ -66,7 +66,7 @@ export const WhatIDoSection = () => {
                 textTransform: "uppercase",
               }}
             >
-              What I Build
+              What I Bring
             </Typography>
           </Box>
           <Typography
@@ -78,7 +78,7 @@ export const WhatIDoSection = () => {
               color: "text.primary",
             }}
           >
-            MY SERVICES
+            TO YOUR TEAM
           </Typography>
         </Box>
 

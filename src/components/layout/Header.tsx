@@ -89,7 +89,7 @@ export const Header = () => {
             <IconButton
               onClick={() => setDrawerOpen(true)}
               sx={{ color: "text.primary" }}
-              aria-label="Ouvrir le menu"
+              aria-label="Open menu"
             >
               <MenuIcon />
             </IconButton>
@@ -119,7 +119,7 @@ export const Header = () => {
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
-          <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: "text.primary" }} aria-label="Fermer le menu">
+          <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: "text.primary" }} aria-label="Close menu">
             <CloseIcon />
           </IconButton>
         </Box>
