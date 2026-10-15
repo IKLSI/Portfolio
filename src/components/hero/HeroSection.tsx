@@ -10,6 +10,10 @@ export const HeroSection = () => {
   const heroRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
     const ctx = gsap.context(() => {
       gsap
         .timeline()

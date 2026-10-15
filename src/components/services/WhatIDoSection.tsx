@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { gsap } from "../../lib/gsap";
+import { gsap, prefersReducedMotion } from "../../lib/gsap";
 import { services } from "../../data/services";
 import { colors } from "../../theme";
 
@@ -10,6 +10,10 @@ export const WhatIDoSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".services-header", {
         opacity: 0,

@@ -1,16 +1,28 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import ProjectCard from "./ProjectCard";
-import { gsap } from "../../lib/gsap";
+import ProjectModal from "./ProjectModal";
+import { gsap, prefersReducedMotion } from "../../lib/gsap";
 import { projects } from "../../data/projects";
 
 export function ProjectsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openProject = (index: number) => {
+    setSelectedIndex(index);
+    setModalOpen(true);
+  };
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".projects-header", {
         opacity: 0,
@@ -75,18 +87,22 @@ export function ProjectsSection() {
           {projects.map((project, i) => (
             <ProjectCard
               key={project.title}
-              index={i}
               title={project.title}
-              description={project.description}
               image={project.image}
-              githubLink={project.githubLink}
-              liveLink={project.liveLink}
-              liveLinkLabel={project.liveLinkLabel}
               technologies={project.technologies || []}
+              onOpen={() => openProject(i)}
             />
           ))}
         </Grid>
       </Container>
+
+      <ProjectModal
+        projects={projects}
+        index={selectedIndex}
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        onNavigate={setSelectedIndex}
+      />
     </Box>
   );
 }

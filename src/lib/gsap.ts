@@ -8,8 +8,4 @@ const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
 
-if (prefersReducedMotion) {
-  gsap.globalTimeline.timeScale(1000);
-}
-
 export { gsap, ScrollTrigger, prefersReducedMotion };

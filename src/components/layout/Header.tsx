@@ -8,7 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { gsap } from "../../lib/gsap";
+import { gsap, prefersReducedMotion } from "../../lib/gsap";
 import { navLinks } from "../../data/navigation";
 
 const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -16,7 +16,7 @@ const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
   const target = document.querySelector(href);
   if (target) {
     gsap.to(window, {
-      duration: 1,
+      duration: prefersReducedMotion ? 0 : 1,
       scrollTo: { y: target, offsetY: 0 },
       ease: "power2.inOut",
     });
@@ -58,7 +58,7 @@ export const Header = () => {
             }}
             onClick={() =>
               gsap.to(window, {
-                duration: 1,
+                duration: prefersReducedMotion ? 0 : 1,
                 scrollTo: { y: 0 },
                 ease: "power2.inOut",
               })

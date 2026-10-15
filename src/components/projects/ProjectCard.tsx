@@ -2,28 +2,22 @@ import { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 import { colors } from "../../theme";
 
 interface ProjectCardProps {
   title: string;
-  description: string;
   image: string;
   technologies?: string[];
-  githubLink?: string;
-  liveLink?: string;
-  liveLinkLabel?: string;
-  index: number;
+  onOpen: () => void;
 }
 
 export default function ProjectCard({
   title,
-  description,
   image,
   technologies = [],
-  githubLink,
-  liveLink,
-  liveLinkLabel = "Live Demo",
-  index,
+  onOpen,
 }: ProjectCardProps) {
   const [hovered, setHovered] = useState(false);
 
@@ -37,13 +31,44 @@ export default function ProjectCard({
           borderRadius: 3,
           overflow: "hidden",
           cursor: "pointer",
-          boxShadow: hovered
-            ? "0 20px 48px rgba(0,0,0,0.18)"
-            : "0 4px 16px rgba(0,0,0,0.07)",
-          transform: hovered ? "translateY(-6px)" : "translateY(0)",
-          transition: "transform 0.35s ease, box-shadow 0.35s ease",
+          boxShadow: "0 4px 16px rgba(0,0,0,0.07)",
         }}
       >
+        <IconButton
+          onClick={onOpen}
+          aria-label={`Voir le détail de ${title}`}
+          sx={{
+            position: "absolute",
+            top: 14,
+            right: 14,
+            zIndex: 2,
+            width: 40,
+            height: 40,
+            color: "#fff",
+            bgcolor: "rgba(10,10,15,0.75)",
+            border: "1px solid rgba(255,255,255,0.6)",
+            backdropFilter: "blur(8px)",
+            opacity: hovered ? 1 : 0,
+            transform: hovered
+              ? "translate(0, 0) scale(1)"
+              : "translate(6px, -6px) scale(0.8)",
+            transition:
+              "opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, border-color 0.3s ease",
+            "& svg": { transition: "transform 0.3s ease" },
+            "&:hover": { bgcolor: "primary.main", borderColor: "primary.main" },
+            "&:hover svg": { transform: "scale(1.15)" },
+            "&:focus-visible": {
+              opacity: 1,
+              transform: "none",
+              outline: "2px solid #a78bfa",
+              outlineOffset: 2,
+            },
+            "@media (hover: none)": { opacity: 1, transform: "none" },
+          }}
+        >
+          <OpenInFullIcon sx={{ fontSize: 18 }} />
+        </IconButton>
+
         <Box
           component="img"
           src={image}
@@ -67,11 +92,8 @@ export default function ProjectCard({
             bottom: 0,
             left: 0,
             right: 0,
-            height: hovered ? "100%" : "140px",
-            background: hovered
-              ? `linear-gradient(to top, rgba(10,10,15,0.97) 0%, rgba(10,10,15,0.78) 55%, rgba(10,10,15,0.3) 100%)`
-              : `linear-gradient(to top, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.6) 55%, transparent)`,
-            transition: "height 0.4s ease, background 0.4s ease",
+            height: "140px",
+            background: `linear-gradient(to top, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.6) 55%, transparent)`,
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-end",
@@ -141,111 +163,7 @@ export default function ProjectCard({
                   ))}
                 </Box>
               )}
-
-              <Box
-                sx={{
-                  overflow: "hidden",
-                  maxHeight: hovered ? "120px" : "0px",
-                  transition: "max-height 0.4s ease",
-                  mt: hovered ? 1 : 0,
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: "0.82rem",
-                    lineHeight: 1.65,
-                    color: "rgba(255,255,255,0.72)",
-                  }}
-                >
-                  {description}
-                </Typography>
-              </Box>
             </Box>
-
-            <Typography
-              sx={{
-                fontSize: "1.6rem",
-                fontWeight: 700,
-                color: "rgba(255,255,255,0.08)",
-                fontFamily: "WanoQuin, sans-serif",
-                lineHeight: 1,
-                flexShrink: 0,
-              }}
-            >
-              {String(index + 1).padStart(2, "0")}
-            </Typography>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              gap: 2,
-              mt: hovered ? 2 : 0,
-              overflow: "hidden",
-              maxHeight: hovered ? "40px" : "0px",
-              transition: "max-height 0.4s ease, margin-top 0.4s ease",
-            }}
-          >
-            {githubLink && (
-              <Box
-                component="a"
-                href={githubLink}
-                target="_blank"
-                rel="noreferrer"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 0.6,
-                  color: "rgba(255,255,255,0.6)",
-                  textDecoration: "none",
-                  fontSize: "0.75rem",
-                  letterSpacing: "0.05em",
-                  transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
-                  "&:hover": {
-                    color: "rgba(255,255,255,1)",
-                    transform: "translateX(2px)",
-                  },
-                }}
-              >
-                <Box
-                  component="img"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                  alt="GitHub"
-                  sx={{
-                    width: 14,
-                    height: 14,
-                    filter: "invert(1)",
-                    opacity: 0.7,
-                    transition: "opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
-                  }}
-                />
-                GitHub
-              </Box>
-            )}
-            {liveLink && (
-              <Box
-                component="a"
-                href={liveLink}
-                target="_blank"
-                rel="noreferrer"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 0.4,
-                  color: "rgba(255,255,255,0.6)",
-                  textDecoration: "none",
-                  fontSize: "0.75rem",
-                  letterSpacing: "0.05em",
-                  transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
-                  "&:hover": {
-                    color: "rgba(255,255,255,1)",
-                    transform: "translateX(2px)",
-                  },
-                }}
-              >
-                ↗ {liveLinkLabel}
-              </Box>
-            )}
           </Box>
         </Box>
       </Box>

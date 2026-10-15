@@ -2,13 +2,17 @@ import { useEffect, useRef } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { gsap } from "../../lib/gsap";
+import { gsap, prefersReducedMotion } from "../../lib/gsap";
 import { skills } from "../../data/skills";
 
 export const SkillsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".skills-header", {
         opacity: 0,

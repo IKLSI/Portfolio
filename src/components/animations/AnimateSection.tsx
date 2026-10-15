@@ -1,5 +1,5 @@
 import { useEffect, useRef, type ReactNode } from "react";
-import { gsap } from "../../lib/gsap";
+import { gsap, prefersReducedMotion } from "../../lib/gsap";
 
 interface AnimateSectionProps {
   children: ReactNode;
@@ -17,7 +17,7 @@ export const AnimateSection = ({
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!sectionRef.current) {
+    if (!sectionRef.current || prefersReducedMotion) {
       return;
     }
 

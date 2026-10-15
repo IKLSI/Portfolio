@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import { gsap } from "../../lib/gsap";
+import { gsap, prefersReducedMotion } from "../../lib/gsap";
 import { career } from "../../data/career";
 import { colors } from "../../theme";
 
@@ -24,16 +24,18 @@ export const CareerTimeline = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".timeline-header", {
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
+      if (!prefersReducedMotion) {
+        gsap.from(".timeline-header", {
+          opacity: 0,
+          y: 30,
+          duration: 0.6,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        });
+      }
 
       gsap.to(".timeline-progress", {
         height: "100%",
@@ -55,35 +57,36 @@ export const CareerTimeline = () => {
           trigger: ".timeline-container",
           start: "top 70%",
           end: "bottom 85%",
-          scrub: 1,
+          scrub: prefersReducedMotion ? true : 1,
         },
       });
 
-      gsap.from(".timeline-item", {
-        opacity: 0,
-        x: -24,
-        duration: 0.6,
-        stagger: 0.18,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".timeline-container",
-          start: "top 72%",
-          toggleActions: "play none none none",
-        },
-      });
+      if (!prefersReducedMotion) {
+        gsap.from(".timeline-item", {
+          opacity: 0,
+          x: -24,
+          duration: 0.6,
+          stagger: 0.18,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".timeline-container",
+            start: "top 72%",
+            toggleActions: "play none none none",
+          },
+        });
 
-      gsap.from(".timeline-dot", {
-        scale: 0,
-        duration: 0.4,
-        stagger: 0.18,
-        ease: "back.out(2)",
-        scrollTrigger: {
-          trigger: ".timeline-container",
-          start: "top 72%",
-          toggleActions: "play none none none",
-        },
-      });
-
+        gsap.from(".timeline-dot", {
+          scale: 0,
+          duration: 0.4,
+          stagger: 0.18,
+          ease: "back.out(2)",
+          scrollTrigger: {
+            trigger: ".timeline-container",
+            start: "top 72%",
+            toggleActions: "play none none none",
+          },
+        });
+      }
     }, sectionRef);
 
     return () => ctx.revert();

@@ -1,3 +1,14 @@
+import ReactIcon from "../assets/icons/react.svg";
+import DotnetIcon from "../assets/icons/dotnet.svg";
+import NodejsIcon from "../assets/icons/nodejs.svg";
+import TypescriptIcon from "../assets/icons/typescript.svg";
+import JavaIcon from "../assets/icons/java.svg";
+import PythonIcon from "../assets/icons/python.svg";
+import PostgresqlIcon from "../assets/icons/postgresql.svg";
+import SqlserverIcon from "../assets/icons/sqlserver.svg";
+import DockerIcon from "../assets/icons/docker.svg";
+import GitIcon from "../assets/icons/git.svg";
+
 export interface Skill {
   name: string;
   icon: string;
@@ -6,39 +17,39 @@ export interface Skill {
 export const skills: Skill[] = [
   {
     name: "React",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    icon: ReactIcon,
   },
-  { name: ".NET", icon: "https://cdn.simpleicons.org/dotnet" },
+  { name: ".NET", icon: DotnetIcon },
   {
     name: "Node.js",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    icon: NodejsIcon,
   },
   {
     name: "TypeScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    icon: TypescriptIcon,
   },
   {
     name: "Java",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    icon: JavaIcon,
   },
   {
     name: "Python",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    icon: PythonIcon,
   },
   {
     name: "PostgreSQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    icon: PostgresqlIcon,
   },
   {
     name: "SQL Server",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftsqlserver.svg",
+    icon: SqlserverIcon,
   },
   {
     name: "Docker",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    icon: DockerIcon,
   },
   {
     name: "Git",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    icon: GitIcon,
   },
 ];
