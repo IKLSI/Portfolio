@@ -54,7 +54,7 @@ export const WelcomeToast = () => {
         <Box sx={{ flex: 1 }}>
           <Typography
             sx={{
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: "0.875rem",
               color: "#fff",
               lineHeight: 1.4,

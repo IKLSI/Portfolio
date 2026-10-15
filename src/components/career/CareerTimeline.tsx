@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import { gsap, ScrollTrigger } from "../../lib/gsap";
+import { gsap } from "../../lib/gsap";
 import { career } from "../../data/career";
 import { colors } from "../../theme";
 
@@ -38,6 +38,19 @@ export const CareerTimeline = () => {
       gsap.to(".timeline-progress", {
         height: "100%",
         ease: "none",
+        onUpdate: () => {
+          const progressLine = sectionRef.current?.querySelector(".timeline-progress");
+          const dots = sectionRef.current?.querySelectorAll(".timeline-dot");
+          if (!progressLine || !dots) return;
+          const lineBottom = progressLine.getBoundingClientRect().bottom;
+          let reachedIndex = 0;
+          dots.forEach((dot, i) => {
+            if (dot.getBoundingClientRect().bottom <= lineBottom) {
+              reachedIndex = i;
+            }
+          });
+          setActiveIndex(reachedIndex);
+        },
         scrollTrigger: {
           trigger: ".timeline-container",
           start: "top 70%",
@@ -71,17 +84,6 @@ export const CareerTimeline = () => {
         },
       });
 
-      const timelineItems = sectionRef.current?.querySelectorAll(".timeline-item");
-      career.forEach((_, i) => {
-        if (!timelineItems?.[i]) return;
-        ScrollTrigger.create({
-          trigger: timelineItems[i],
-          start: "top 80%",
-          onEnter: () => setActiveIndex(i),
-          onLeaveBack: () => setActiveIndex(Math.max(0, i - 1)),
-        });
-      });
-
     }, sectionRef);
 
     return () => ctx.revert();
@@ -109,7 +111,7 @@ export const CareerTimeline = () => {
             <Typography
               sx={{
                 fontSize: "0.75rem",
-                fontWeight: 500,
+                fontWeight: 400,
                 color: "primary.main",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
@@ -203,7 +205,7 @@ export const CareerTimeline = () => {
                     sx={{
                       height: 20,
                       fontSize: "0.62rem",
-                      fontWeight: 600,
+                      fontWeight: 700,
                       bgcolor: item.type === "work" ? "rgba(143,68,253,0.08)" : "rgba(13,110,253,0.08)",
                       color: item.type === "work" ? "#7a35e8" : "secondary.main",
                       border: `1px solid ${item.type === "work" ? "rgba(143,68,253,0.2)" : "rgba(13,110,253,0.2)"}`,
@@ -221,7 +223,7 @@ export const CareerTimeline = () => {
                 >
                   {item.title}
                 </Typography>
-                <Typography sx={{ fontSize: "0.82rem", fontWeight: 600, color: "primary.main", mb: 1 }}>
+                <Typography sx={{ fontSize: "0.82rem", fontWeight: 700, color: "primary.main", mb: 1 }}>
                   {item.subtitle}
                 </Typography>
                 <Typography sx={{ fontSize: "0.875rem", lineHeight: 1.75, color: colors.body, maxWidth: 520 }}>
@@ -334,7 +336,7 @@ export const CareerTimeline = () => {
                       <Typography
                         sx={{
                           fontSize: "0.7rem",
-                          fontWeight: 500,
+                          fontWeight: 400,
                           color: "#aaa",
                           mt: 0.3,
                           letterSpacing: "0.04em",

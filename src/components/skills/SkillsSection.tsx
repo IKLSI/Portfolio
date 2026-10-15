@@ -59,7 +59,7 @@ export const SkillsSection = () => {
             <Typography
               sx={{
                 fontSize: "0.75rem",
-                fontWeight: 500,
+                fontWeight: 400,
                 color: "primary.main",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
@@ -125,7 +125,7 @@ export const SkillsSection = () => {
               <Typography
                 component="span"
                 sx={{
-                  fontWeight: 600,
+                  fontWeight: 700,
                   fontSize: "0.85rem",
                   color: "text.primary",
                   textAlign: "center",

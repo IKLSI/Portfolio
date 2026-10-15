@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { gsap, prefersReducedMotion } from "../../lib/gsap";
-import ProfilImage from "../../assets/img/Presentation.jpg";
+import ProfilImage from "../../assets/img/Presentation.webp";
 import { colors } from "../../theme";
 
 export const HeroSection = () => {
@@ -86,7 +86,7 @@ export const HeroSection = () => {
               sx={{
                 mt: 2.5,
                 fontSize: "0.85rem",
-                fontWeight: 500,
+                fontWeight: 400,
                 color: colors.dark,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
@@ -109,14 +109,14 @@ export const HeroSection = () => {
               attention.{" "}
               <Box
                 component="span"
-                sx={{ color: colors.lavender, fontWeight: 600 }}
+                sx={{ color: colors.lavender, fontWeight: 700 }}
               >
                 Solid architecture
               </Box>{" "}
               on the back end,{" "}
               <Box
                 component="span"
-                sx={{ color: colors.lavender, fontWeight: 600 }}
+                sx={{ color: colors.lavender, fontWeight: 700 }}
               >
                 clean and intuitive interfaces
               </Box>{" "}

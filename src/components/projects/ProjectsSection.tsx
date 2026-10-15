@@ -49,7 +49,7 @@ export function ProjectsSection() {
             <Typography
               sx={{
                 fontSize: "0.75rem",
-                fontWeight: 500,
+                fontWeight: 400,
                 color: "primary.main",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",

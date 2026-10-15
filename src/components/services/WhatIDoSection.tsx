@@ -60,7 +60,7 @@ export const WhatIDoSection = () => {
             <Typography
               sx={{
                 fontSize: "0.75rem",
-                fontWeight: 500,
+                fontWeight: 400,
                 color: "primary.main",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
@@ -159,7 +159,7 @@ export const WhatIDoSection = () => {
                       alignItems: "center",
                       gap: 0.75,
                       fontSize: "0.68rem",
-                      fontWeight: 600,
+                      fontWeight: 700,
                       color: "primary.main",
                       bgcolor: "#fff",
                       border: "1px solid rgba(143,68,253,0.18)",

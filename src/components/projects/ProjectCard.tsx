@@ -118,7 +118,7 @@ export default function ProjectCard({
                         alignItems: "center",
                         gap: 1,
                         fontSize: "0.7rem",
-                        fontWeight: 600,
+                        fontWeight: 700,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
                         color: colors.lilac,

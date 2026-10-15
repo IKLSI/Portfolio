@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import "@fontsource/poppins/index.css";
+import "@fontsource/poppins/latin-400.css";
 import "./lib/gsap";
 import theme from "./theme";
 import App from "./App.tsx";
